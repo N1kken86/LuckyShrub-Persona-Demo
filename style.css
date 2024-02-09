@@ -1,7 +1,7 @@
 body {
     background-color: azure;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 2rem 5% 2rem 5%;
+    margin: 2rem 20% 2rem 20%;
 }
 h1 {
     font-size: 3rem;
@@ -10,17 +10,19 @@ h2{
     font-size: 2rem;
 }
 
-header > img {
+/* Logo */
+header > a > img {
     object-fit: contain;
     display: block;
     margin: auto;
     width: 5vw;
 }
 
+/* Navigation Bar */
 nav ul {
     list-style-type: none;
     text-align: center;
-    background-color: beige;
+    background-color: rgb(224, 224, 184);
     padding-left: 0;
     border-radius: 1rem;
 }
@@ -32,20 +34,98 @@ nav li {
 nav li a {
     display: block;
     text-align: justify;
+    font-weight: bold;
     padding: 0.8rem 2rem 0.8rem 2rem;
     border-radius: 1rem;
 }
-nav li a:link{
+
+nav li a:link, a:visited {
     text-decoration: none;
+    color:rgb(34, 121, 34);
 }
-nav li a:hover{
-    background-color: rgb(166, 209, 166);
+nav li a:hover {
+    background-color: rgb(34, 121, 34);
+    color: aliceblue;
+}
+nav li a:active {
+    color: rgb(34, 121, 34);
+    background-color: aliceblue;
 }
 
+/* The start of body secion*/
 section {
     display: flex;
+    border-radius: 1rem;
 }
 
 article {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#promotion {
+    background-color: rgba(124, 196, 102, 0.671);
+    background-image: url("assets/promotion.jpg");
+    background-repeat: no-repeat;
+    background-position-x: 30%;
+    background-position-y: 74.4%;
+    background-size: 150%;
+    margin-top: 2rem;
+}
+
+#promotion > article {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    color: white;
+}
+
+.column {
+    height: 30rem;
+    margin-top: 2rem;
+}
+
+.column > article {
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    background-color: aquamarine;
+    border-radius: 2rem;
+}
+
+article > img {
+    height: 30%;
+    object-fit: cover;
+}
+
+article > a {
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    padding: 1.1rem;
+    background-color: aliceblue;
+    border-radius: 0.8rem;
+}
+
+article > a:active {
+    color: aliceblue;
+    background-color: blue;
+}
+
+/* start of footer */
+footer {
+    margin-top: 2rem;
+    display: flex;
+}
+
+footer > img {
+    width: 4vw;
+}
+
+footer > p {
+    text-align: right;
+    position: absolute;
+    right: 20%;
 }
